@@ -1,7 +1,3 @@
----
-title: iphone-text-extract-then-format
----
-
 Note: All of the heavy lifting is done by [iphone-message-export](https://github.com/sethrj/iphone-message-export) from [Seth R. Johnson](https://github.com/sethrj); all i did was add the format.py file
 
 
