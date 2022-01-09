@@ -4,11 +4,10 @@ title: iphone-text-extract-then-format
 
 Note: All of the heavy lifting is done by [iphone-message-export](https://github.com/sethrj/iphone-message-export) from [Seth R. Johnson](https://github.com/sethrj); all i did was add the format.py file
 
-Careful with [libimobiledevice](https://libimobiledevice.org); it might crash your computer
 
 # Iphone Text Message Export and Format
 
-Extracts messages from an iphone backup folder using [libimobiledevice](https://libimobiledevice.org), converts it to a json format using [iphone-message-export](https://github.com/sethrj/iphone-message-export), and finally converts it to a readable html format using the `format.py` script. 
+Extracts messages from an iphone backup, converts it to a json format using [iphone-message-export](https://github.com/sethrj/iphone-message-export), and finally converts it to a readable html format using the `format.py` script. 
 
 _worked on an iphone 6s using ubuntu 21_
 
@@ -17,22 +16,13 @@ _worked on an iphone 6s using ubuntu 21_
 
 # Usage
 
-## Step 1: Download libmobile
+## Step 1: Place an iphone backup in the `backup/` folder
 
-On Debian / Ubuntu terminal:
+You can get an iphone backup using macOS. 
 
-```bash
-sudo apt-get install libimobiledevice-utils
-```
+On linux, options are more limited. I used the `idevicebackup2` tool from the `libimobiledevice` library <-- HOWEVER!! I think it may have crashed my OS, so be extremely careful if you go down that route.
 
-## Step 2: Backup a plugged in iphone
-
-```bash
-idevicebackup2 backup backup_folder_location/ # <-- backup in location of your choosing
-````
-^ place all the contents from `backup_folder_location/` into the local `backup/` folder in this repository
-
-## Step 3: Extract all the messages
+## Step 2: Extract all the messages
 
 Use the `export.py`, which is a slightly modified script from [Seth Johnson's iphone-message-export repo](https://github.com/sethrj/iphone-message-export), to convert all the messages to json format
 
@@ -44,7 +34,7 @@ python3 export.py
 ```
 ^ or whatever you use to call python
 
-## Step 4: Convert to HTML
+## Step 3: Convert to HTML
 
 Finally, convert it all to html with the `format.py` file.
 
