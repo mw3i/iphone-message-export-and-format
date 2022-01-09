@@ -4,9 +4,11 @@ title: iphone-text-extract-then-format
 
 Note: All of the heavy lifting is done by [iphone-message-export](https://github.com/sethrj/iphone-message-export) from [Seth R. Johnson](https://github.com/sethrj); all i did was add the format.py file
 
+Careful with [libimobiledevice](https://libimobiledevice.org); it might crash your computer
+
 # Iphone Text Message Export and Format
 
-Extracts messages from an iphone backup folder using [libimobiledevice](), converts it to a json format using [iphone-message-export](https://github.com/sethrj/iphone-message-export), and finally converts it to a readable html format using the `format.py` script. 
+Extracts messages from an iphone backup folder using [libimobiledevice](https://libimobiledevice.org), converts it to a json format using [iphone-message-export](https://github.com/sethrj/iphone-message-export), and finally converts it to a readable html format using the `format.py` script. 
 
 _worked on an iphone 6s using ubuntu 21_
 
